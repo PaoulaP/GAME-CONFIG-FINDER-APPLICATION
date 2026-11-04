@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Game Finder+ | Comptes et thèmes</title>
+<style>
+[hidden]{display:none!important}*{box-sizing:border-box}body{margin:0;background:#101321;color:#f4f5ff;font:16px system-ui}main{max-width:1050px;margin:auto;padding:28px 18px}header{padding:24px 0}h1{font-size:clamp(2.5rem,8vw,5rem);margin:0}p,small{color:#c3c8df}strong{color:#a9f5d5}form,article,.filters{background:#1d2237;border:1px solid #373e5a;border-radius:16px;padding:20px;margin-bottom:16px}fieldset{border:0;padding:0;margin:0 0 22px}legend{font-weight:bold;margin-bottom:12px}.grid,#cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:14px}label{display:block}select,input,button{font:inherit;padding:9px;border-radius:8px;border:1px solid #59617e;color:inherit;background:#101321}select,input{width:100%;margin-top:5px}button{background:#a9f5d5;color:#101321;cursor:pointer;font-weight:bold}summary{cursor:pointer}h3{margin-top:0}a{color:#a9f5d5}
+.hero{padding:clamp(28px,7vw,76px);border:1px solid #373e5a;border-radius:24px;background:radial-gradient(ellipse at top right,#39446c,#1d2237 65%)}.hero h2{font-size:clamp(2rem,6vw,4rem);line-height:1.05;max-width:16ch;margin:16px 0}.hero p{max-width:53ch}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.steps{margin-top:20px}.back{margin-bottom:16px}
+.featured{margin-top:24px}.featured article{padding:0;overflow:hidden}.featured img{display:block;width:100%;aspect-ratio:460/215;object-fit:cover;background:#282f49}.featured h3,.featured small{display:block;margin:12px 16px}
+.account-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:16px}.account-bar span{margin-right:auto}#account{max-width:420px}#account label{margin-bottom:10px}#account h2{margin-top:0}
+:root[data-theme="light"] body{background:#f4f6fc;color:#19243b}:root[data-theme="light"] :is(form,article,.filters,.hero){background:#fff;border-color:#cbd5e7}:root[data-theme="light"] :is(p,small){color:#43516b}:root[data-theme="light"] strong{color:#075e51}:root[data-theme="light"] :is(input,select){background:#f4f6fc;border-color:#76839c}
+</style>
+<main>
+<header><strong>28 JEUX PC · CONFIGURATIONS PC</strong><h1>Game Finder+</h1><p>Découvrez des jeux selon vos goûts et la configuration de votre PC.</p></header>
+<nav class="account-bar" aria-label="Compte et affichage"><span id="accountName"></span><button id="login">Connexion</button><button id="signup">Créer un compte</button><button id="manage" hidden>Mon compte</button><button id="logout" hidden>Déconnexion</button><button id="theme" aria-pressed="false">Mode clair</button></nav>
+<form id="account" hidden>
+<h2 id="accountTitle"></h2>
+<label>Nom d’utilisateur<input name="username" required minlength="3" maxlength="40" autocomplete="username"></label>
+<label>Mot de passe<input name="password" required minlength="8" maxlength="128" type="password"></label>
+<p>Ce compte et votre progression sont enregistrés dans ce navigateur.</p>
+<button>Continuer</button> <button type="button" id="cancelAccount">Annuler</button>
+<p id="accountError" role="alert"></p>
+</form>
+<section id="managePanel" class="filters" hidden><h2>Mon compte</h2><p>Gérez votre profil local et sa progression.</p><button id="deleteAccount">Supprimer mon compte</button> <button id="closeManage">Fermer</button></section><section id="home" aria-labelledby="welcome">
+<div class="hero">
+<strong>À VOUS DE JOUER</strong>
+<h2 id="welcome" tabindex="-1">Trouvez votre prochain jeu</h2>
+<p>Partez de vos jeux favoris et découvrez des titres qui correspondent à vos goûts et à votre PC.</p>
+<div class="actions"><button id="start">Trouver des jeux</button><button id="browse">Explorer le catalogue</button></div>
+</div>
+<section class="featured" aria-labelledby="featured-heading">
+<h2 id="featured-heading">Jeux à découvrir</h2>
+<div class="grid">
+<article><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/620/faffc0f560786e2f05104a8d2fac837c6969bf13/header.jpg?t=1790187113" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgMjE1Ij48cmVjdCB3aWR0aD0iNDYwIiBoZWlnaHQ9IjIxNSIgZmlsbD0iIzIwMjg0NSIvPjxlbGxpcHNlIGN4PSIxNDUiIGN5PSIxMDUiIHJ4PSI0NSIgcnk9Ijc2IiBmaWxsPSJub25lIiBzdHJva2U9IiM1OGNhZmYiIHN0cm9rZS13aWR0aD0iMTIiLz48ZWxsaXBzZSBjeD0iMzE1IiBjeT0iMTA1IiByeD0iNDUiIHJ5PSI3NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZhZDU1IiBzdHJva2Utd2lkdGg9IjEyIi8+PC9zdmc+'" width="460" height="215" alt="Illustration de Portal 2"><h3>Portal 2</h3><small>Puzzle · Science-fiction</small></article>
+<article><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg?t=1758127023" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgMjE1Ij48cmVjdCB3aWR0aD0iNDYwIiBoZWlnaHQ9IjIxNSIgZmlsbD0iIzIwMjg0NSIvPjxwYXRoIGQ9Ik0yMzAgMjJDMjc1IDc1IDIwMiA3OSAyNjUgMTEwQzI5MCA5MCAzMDAgODUgMzAxIDYwQzM2NSAxNTcgMjc1IDE5OSAyMzAgMTk5QzEzMCAxOTkgMTI0IDEyMCAxODIgNzdDMTcyIDEyNiAyMDggMTI4IDIzMCAyMloiIGZpbGw9IiNmYTY1NGYiLz48L3N2Zz4='" width="460" height="215" alt="Illustration de Hades"><h3>Hades</h3><small>Roguelite · Mythologique</small></article>
+<article><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1786554168" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgMjE1Ij48cmVjdCB3aWR0aD0iNDYwIiBoZWlnaHQ9IjIxNSIgZmlsbD0iIzIwMjg0NSIvPjxjaXJjbGUgY3g9IjM0MCIgY3k9IjYyIiByPSIzMCIgZmlsbD0iI2ZmZTE4YiIvPjxwYXRoIGQ9Ik0wIDE1MEwxNDAgNzhMMjUwIDE1MEwzNjAgMTE1TDQ2MCAxNTBWMjE1SDBaIiBmaWxsPSIjNjNhODY1Ii8+PHBhdGggZD0iTTE1MCAxNTBMMjIwIDk1TDI5MCAxNTBWMjA1SDE1MFoiIGZpbGw9IiNkMzZiNTUiLz48cGF0aCBkPSJNMjA3IDIwNVYxNjVIMjMzVjIwNSIgZmlsbD0iI2ZmZTJhYyIvPjwvc3ZnPg=='" width="460" height="215" alt="Illustration de Stardew Valley"><h3>Stardew Valley</h3><small>Simulation · Apaisante</small></article>
+</div>
+</section>
+<div class="grid steps">
+<article><h3>01 · Vos goûts</h3><p>Choisissez vos favoris, votre style de jeu et l’ambiance recherchée.</p></article>
+<article><h3>02 · Votre PC</h3><p>Renseignez votre matériel pour obtenir une estimation de compatibilité.</p></article>
+<article><h3>03 · Vos résultats</h3><p>Comparez les jeux proposés et découvrez pourquoi ils vous correspondent.</p></article>
+</div>
+</section>
+<div id="app" hidden>
+<button class="back" id="back">← Accueil</button>
+<form id="profile">
+<fieldset><legend>01 · Vos préférences</legend><div class="grid">
+<label>Jeux favoris (sélection multiple)<select name="favorites" multiple size="4"></select></label>
+<label>Genre<select name="genre"></select></label>
+<label>Gameplay<select name="play"></select></label>
+<label>Ambiance<select name="mood"></select></label>
+<label>Difficulté<select name="difficulty"></select></label>
+</div></fieldset>
+<fieldset><legend>02 · Votre PC</legend><div class="grid">
+<label>Processeur<input name="cpu" required maxlength="100" placeholder="Ex. Intel Core i5-2500K"></label>
+<label>Carte graphique<input name="gpu" required maxlength="100" placeholder="Ex. GTX 970"></label>
+<label>RAM (Go)<input type="number" name="ram" required min="1" max="4096"></label>
+<label>Type de RAM<select name="ramType"><option value="">Inconnu</option><option>DDR3</option><option>DDR4</option><option>DDR5</option><option>LPDDR4</option><option>LPDDR4X</option><option>LPDDR5</option><option>LPDDR5X</option><option>Autre</option></select></label><label>Système<select name="os" required><option value="">Choisir</option><option>Windows</option><option>macOS</option><option>Linux</option></select></label>
+<label>Stockage libre (Go)<input type="number" name="disk" required min="0" max="1000000"></label>
+</div></fieldset>
+<button>Obtenir mes recommandations</button> <button type="button" id="catalogue">Voir le catalogue</button>
+<p id="error" role="alert"></p></form>
+<section aria-labelledby="heading"><h2 id="heading" tabindex="-1">Catalogue de démonstration</h2>
+<p>Les fiches indiquent les configurations minimales Windows publiées. La compatibilité est une estimation sans garantie de performance.</p>
+<div class="filters grid"><label>Filtrer par genre<select id="genreFilter"></select></label><label id="statusLabel" hidden>Filtrer par compatibilité<select id="statusFilter"></select></label></div>
+<p id="count" role="status"></p><div id="cards"></div></section>
+</div>
+</main>
+<script>
+const minimums = [["814380","7/8/10 64 bits","4","25","Core i3-2100 / FX-6300","GTX 760 / HD 7950"],["374320","7 SP1/8.1/10 64 bits","4","25","Core i3-2100 / FX-6300","GTX 750 Ti / HD 7950"],["367520","10 21H1+","4","9","Core i3-3240 / FX-4300","GTX 560 Ti / HD 7750 (1 Go)"],["504230","7+","2","1.2","Core i3 M380","Intel HD 4000"],["413150","Vista+","2","0.5","2 GHz","256 Mo VRAM, Shader Model 3.0+"],["2138710","8.1 64 bits","8","22","Core i5-3470 / FX-4350","GT 640 / Radeon R7 250"],["1055540","7 SP1+","2","0.4","Double cœur 2 GHz","Intel HD 4400 ou mieux"],["588650","7+","2","0.5","Intel Core i5 ou mieux","GeForce 450 GTS / Radeon HD 5750"],["620","XP/Vista/7","2","8","Pentium 4 3 GHz / double cœur 2 GHz / AMD64 X2","128 Mo, Pixel Shader 2.0b (Radeon X800 / GeForce 7600 / Intel HD 2000)"],["1145360","7 SP1","4","15","Double cœur 2,4 GHz","1 Go VRAM, DirectX 10+"],["646570","XP/Vista/7/8/8.1/10","2","1","2 GHz","1 Go VRAM, OpenGL 3.0+ (ou 2.1 avec extensions ARB)"],["105600","XP/Vista/7","2.5","0.2","2 GHz","128 Mo VRAM, Shader Model 2.0+"],["264710","Vista SP2+ 64 bits","4","20","Intel Haswell 2 cœurs / 4 threads à 2,5 GHz","Intel HD 4600 ou équivalent"],["227300","10 64 bits","8","25","Core i5-6400 / Ryzen 3 1200","GTX 660 / RX 460 / Intel HD 630 (2 Go VRAM)"],["813780","10 64 bits","4","15","Core 2 Duo / Athlon 64 X2 5600+","GT 420 / HD 6850 / Intel HD 4000 (2 Go VRAM)"],["289070","7/8.1/10 64 bits","4","17","Core i3 2,5 GHz / Phenom II 2,6 GHz","HD 5570 / GeForce 450 / Intel HD 530 (1 Go)"],["632470","7","2","20","Core 2 Duo","DirectX 11, 512 Mo VRAM"],["292030","11 64 bits","12","60","Core i5-8400 / Ryzen 5 2600","GTX 1660 / RX 5500 XT 8 Go / Arc A580","SSD"],["782330","7/10 64 bits","8","80","Core i5 3,3 GHz / Ryzen 3 3,1 GHz","GTX 1050 Ti 4 Go / GTX 1060 3 Go / GTX 1650 4 Go / R9 280 3 Go / R9 290 4 Go / RX 470 4 Go"],["550","XP/Vista/7","2","13","Pentium 4 3 GHz","128 Mo, Shader Model 2.0 (Radeon X800 / GeForce 6600)"],["883710","10 64 bits","8","26","Core i5-4460 / FX-6300","GTX 960 / RX 460"],["1551360","10 version 18362.0+","8","110","Core i5-4460 / Ryzen 3 1200","GTX 970 / RX 470 / Arc A380"],["252950","7+ 64 bits","4","20","Double cœur 2,5 GHz","GeForce GTX 760 / Radeon R7 270X"],["1057090","10 version 18362.0+","8","20","Athlon X4 / Core i5-4460","GTX 950 / R7 370"],["268910","7","3","4","Core 2 Duo E8400 / Athlon 64 X2 6000+ à 3 GHz","GeForce 9600 GT / HD 3870 (512 Mo)"],["753640","10","6","8","Core i5-2300 / FX-4350","GTX 660 / HD 7870 (2 Go)"],["1135690","7 SP1+","","1","Processeur compatible SSE2","DirectX 10, Shader Model 4.0"],["1778820","10 64 bits","8","100","Core i5-6600K / Ryzen 5 1600","GTX 1050 Ti / R9 380X"]];
+const games = [
+ ['Sekiro: Shadows Die Twice','Action',['Parades','Combat technique'],'Sombre','Élevée','Un shinobi affronte des guerriers et des créatures dans un Japon fantastique.'],
+ ['Dark Souls III','Action','Esquive','Sombre','Élevée','Traversez un royaume en déclin où chaque combat demande de la précision.'],
+ ['Hollow Knight','Metroidvania','Exploration','Sombre','Élevée','Explorez les profondeurs du royaume oublié de Hallownest.'],
+ ['Celeste','Plateforme','Précision','Mélancolique','Élevée','Accompagnez Madeline dans son ascension du mont Celeste.'],
+ ['Stardew Valley','Simulation',['Gestion','Exploration'],'Apaisante','Accessible','Restaurez une ferme et découvrez les habitants de la vallée.'],
+ ['Sifu','Action','Parades','Urbaine','Élevée','Maîtrisez le kung-fu lors de combats au corps à corps.'],
+ ['A Short Hike','Aventure','Exploration','Apaisante','Accessible','Parcourez les sentiers d’un parc et atteignez son sommet.'],
+ ['Dead Cells','Action','Esquive','Sombre','Élevée','Explorez un château changeant au fil de tentatives successives.'],
+ ['Portal 2','Puzzle',['Logique','Coopération'],'Science-fiction','Modérée','Utilisez des portails pour résoudre des énigmes dans les laboratoires d’Aperture Science.'],
+ ['Hades','Roguelite',['Esquive','Combat rapide'],'Mythologique','Élevée','Aidez Zagreus à s’échapper des Enfers au fil de tentatives renouvelées.'],
+ ['Slay the Spire','Cartes','Construction de deck','Fantastique','Élevée','Composez un deck et adaptez votre stratégie à chaque ascension de la tour.'],
+ ['Terraria','Bac à sable','Exploration','Fantastique','Modérée','Creusez, construisez et affrontez des boss dans un monde en deux dimensions.'],
+ ['Subnautica','Survie','Exploration','Science-fiction','Modérée','Explorez un océan extraterrestre et fabriquez l’équipement nécessaire pour survivre.'],
+ ['Euro Truck Simulator 2','Simulation','Conduite','Apaisante','Accessible','Transportez des marchandises à travers l’Europe et développez votre entreprise.'],
+ ['Age of Empires II: Definitive Edition','Stratégie','Gestion','Historique','Modérée','Développez une civilisation, gérez vos ressources et commandez des armées.'],
+ ['Civilization VI','Stratégie','Gestion','Historique','Modérée','Guidez une civilisation à travers les siècles en négociant, bâtissant et explorant.'],
+ ['Disco Elysium','Jeu de rôle','Dialogue','Mélancolique','Modérée','Incarnez un détective amnésique qui enquête sur un meurtre dans la ville de Revachol.'],
+ ['The Witcher 3: Wild Hunt','Jeu de rôle','Exploration','Sombre','Modérée','Suivez Geralt dans sa recherche de Ciri au cœur d’un monde déchiré par la guerre.'],
+ ['DOOM Eternal','Tir','Combat rapide','Science-fiction','Élevée','Repoussez une invasion démoniaque en alternant armes, déplacements et attaques rapprochées.'],
+ ['Left 4 Dead 2','Tir','Coopération','Horreur','Modérée','Progressez en équipe à travers des campagnes envahies par des infectés.'],
+ ['Resident Evil 2','Horreur','Survie','Horreur','Élevée','Échappez aux créatures de Raccoon City en gérant des ressources limitées.'],
+ ['Forza Horizon 5','Course','Conduite','Festive','Accessible','Participez à des courses et explorez un monde ouvert inspiré du Mexique.'],
+ ['Rocket League','Sport','Compétition','Festive','Modérée','Marquez des buts avec des voitures propulsées et coordonnez vos passes en équipe.'],
+ ['Ori and the Will of the Wisps','Metroidvania','Exploration','Mélancolique','Modérée','Explorez les terres de Niwen et débloquez des capacités pour ouvrir de nouveaux chemins.'],
+ ['Cuphead','Plateforme','Précision','Cartoon','Élevée','Affrontez des boss aux attaques variées dans un univers inspiré des dessins animés des années 1930.'],
+ ['Outer Wilds','Aventure','Exploration','Science-fiction','Modérée','Explorez un petit système solaire et reconstituez son histoire au fil d’une boucle temporelle.'],
+ ['Unpacking','Puzzle','Rangement','Apaisante','Accessible','Déballez des cartons et découvrez la vie d’une personne à travers ses objets.'],
+ ['Tekken 8','Combat','Compétition','Urbaine','Élevée','Choisissez un combattant et maîtrisez ses enchaînements dans des duels en trois dimensions.']
+].map(([title,genre,play,mood,difficulty,summary],index)=>{
+ const [id,windows,ram,disk,cpu,gpu,drive] = minimums[index];
+ return {title,genre,play:[play].flat(),mood,difficulty,summary,ram:ram ? Number(ram) : null,disk:Number(disk),cpu,gpu,os:'Windows',windows,drive,id};
+});
+const form = document.getElementById("profile");
+const el = id => document.getElementById(id);
+const statuses = ['Compatible','Limite','Insuffisante','Inconnue'];
+function options(select, values, empty) {
+ if(empty) select.add(new Option(empty,''));
+ for(const value of new Set(values)) select.add(new Option(value,value));
+}
+options(form.elements.favorites,games.map(g=>g.title));
+for(const key of ['genre','play','mood','difficulty']) options(form.elements[key],games.flatMap(g=>g[key]),'Sans préférence');
+options(el('genreFilter'),games.map(g=>g.genre),'Tous les genres');
+options(el('statusFilter'),statuses,'Tous les niveaux');
+
+const normalize = (text = "") => text.trim().toLowerCase().replace(/\s+/g,' ');
+function compatibility(game, pc) {
+ const deficits = [];
+ if(pc.os !== game.os) deficits.push('système différent de Windows');
+ if(game.ram !== null && pc.ram < game.ram) deficits.push('RAM insuffisante');
+ if(game.disk !== null && pc.disk < game.disk) deficits.push('stockage insuffisant');
+ if(deficits.length) return [2,deficits.join(', ')];
+ const unknown = ['cpu','gpu'].filter(key=>!game[key] || !game[key].split(" / ").some(model=>normalize(model) === normalize(pc[key])));
+ if(game.ram === null || game.disk === null) return [3,'Exigences matérielles non renseignées'];
+ if(unknown.length) return [3,'Comparaison indisponible pour : '+unknown.map(key=>key==='cpu'?'processeur':'carte graphique').join(', ')];
+ if(Number(pc.ram) === game.ram || Number(pc.disk) === game.disk) return [1,'RAM ou stockage au minimum du profil'];
+ return [0,'Matériel conforme aux critères comparés'];
+}
+function recommend(pc, favorites) {
+ return games.filter(game=>!favorites.includes(game)).map(game=>{
+  const matchingPlay = game.play.filter(style=>(pc.play ? [pc.play] : favorites.flatMap(g=>g.play)).includes(style)); const match = key => key === "play" ? matchingPlay.length > 0 : pc[key] === game[key] || (!pc[key] && favorites.some(favorite=>favorite[key]===game[key]));
+  const reasons = [];
+  for(const [key,label] of Object.entries({genre:'Genre',play:'Gameplay',mood:'Ambiance',difficulty:'Difficulté'})) {
+   if(match(key)) reasons.push(label+' · '+(key==='play' ? matchingPlay.join(', ') : game[key]));
+  }
+  const [status, note] = compatibility(game,pc);
+  const taste = (match('play') ? 40 : match('genre') ? 20 : 0) + (match('mood') ? 25 : 0) + (match('difficulty') ? 15 : 0);
+  return {game,status,note,score:taste+[20,10,0,5][status],reasons};
+ }).filter(result=>result.reasons.length).sort((a,b)=>b.score-a.score);
+}
+let results = null;
+function render() {
+ const list = (results ?? games.map(game=>({game}))).filter(({game,status})=>
+  (!el('genreFilter').value || game.genre===el('genreFilter').value) &&
+  (!results || !el('statusFilter').value || statuses[status]===el('statusFilter').value));
+ el('heading').textContent = results ? 'Vos recommandations' : 'Catalogue de démonstration';
+ el('statusLabel').hidden = !results;
+ el('count').textContent = list.length ? list.length+' jeu(x)' : 'Aucun jeu trouvé. Essayez d’élargir vos préférences ou vos filtres.';
+ el('cards').replaceChildren(...list.map(({game,status,note,score,reasons})=>{
+  const card = document.createElement('article');
+  card.innerHTML = '<h3></h3><strong></strong><p></p><small></small><details><summary>Fiche du jeu</summary><p></p><p></p></details>';
+  card.querySelector('h3').textContent = game.title;
+  card.querySelector('strong').textContent = results ? score+'/100 · '+statuses[status]+' (estimation)' : game.genre;
+  card.querySelector('p').textContent = results ? reasons.join(' • ') : [...game.play,game.mood,game.difficulty].join(' • ');
+  card.querySelector('small').textContent = note ?? '';
+  const [synopsis, requirements] = card.querySelectorAll('details p');
+  synopsis.textContent = game.summary;
+  requirements.textContent = `Configuration minimale · Windows ${game.windows} · RAM : ${game.ram === null ? 'non précisée par la source' : game.ram + ' Go'} · Stockage : ${game.disk === null ? 'inconnu' : game.disk + ' Go libres' + (game.drive ? ' (' + game.drive + ')' : '')} · Processeur : ${game.cpu ?? 'inconnu'} · GPU : ${game.gpu ?? 'inconnu'}`;
+  const source = document.createElement('a');
+  source.href = 'https://store.steampowered.com/app/'+game.id+'/#sysreq';
+  source.target = '_blank';
+  source.rel = 'noopener noreferrer';
+  source.textContent = 'Source des exigences · Steam';
+  card.querySelector('details').append(source);
+  return card;
+ }));
+}
+form.addEventListener('submit',event=>{
+ event.preventDefault();
+ const pc = Object.fromEntries(new FormData(form));
+ const titles = new FormData(form).getAll('favorites');
+ el('error').textContent = '';
+ if((!titles.length && !pc.genre) || !pc.cpu.trim() || !pc.gpu.trim()) {
+  el('error').textContent = 'Renseignez le processeur et la carte graphique, puis choisissez au moins un jeu favori ou un genre.';
+  return;
+ }
+ results = recommend(pc,games.filter(game=>titles.includes(game.title)));
+ el('genreFilter').value = el('statusFilter').value = '';
+ render();
+ el('heading').scrollIntoView();
+});
+el('catalogue').onclick = () => { results = null; el('genreFilter').value = ''; render(); el('heading').scrollIntoView(); };
+function openApp(browse) {
+ el('home').hidden = true;
+ el('app').hidden = false;
+ form.hidden = browse;
+ if(browse) {
+  el('catalogue').click();
+  el('heading').focus();
+ } else {
+  form.elements.favorites.focus();
+ }
+}
+el('start').onclick = () => openApp(false);
+el('browse').onclick = () => openApp(true);
+el('back').onclick = () => {
+ el('app').hidden = true;
+ el('home').hidden = false;
+ el('welcome').focus();
+};
+el('genreFilter').onchange = el('statusFilter').onchange = render;
+render();
+const storePrefix = 'game-finder:';
+const account = el('account');
+let user = '';
+let creating = false;
+function applyTheme(theme) {
+ document.documentElement.dataset.theme = theme;
+ el('theme').textContent = theme === 'light' ? 'Mode sombre' : 'Mode clair';
+ el('theme').setAttribute('aria-pressed', theme === 'light');
+}
+function saveProgress() {
+ if (!user || !account.hidden) return;
+ const fields = new FormData(form);
+ const values = Object.fromEntries(fields);
+ values.favorites = fields.getAll('favorites');
+ const view = el('app').hidden ? 'home' : form.hidden ? 'browse' : 'profile';
+ const expanded = [...el('cards').querySelectorAll('details[open]')].map(detail=>detail.closest('article').querySelector('h3').textContent);
+ localStorage.setItem(storePrefix+'progress:'+user,JSON.stringify({
+  values,view,results,expanded,scroll:window.scrollY,genre:el('genreFilter').value,
+  status:el('statusFilter').value,theme:document.documentElement.dataset.theme
+ }));
+}
+function restoreProgress() {
+ const saved = JSON.parse(localStorage.getItem(storePrefix+'progress:'+user) || 'null');
+ form.reset();
+ el('error').textContent = '';
+ results = null;
+ el('genreFilter').value = saved?.genre ?? '';
+ el('statusFilter').value = saved?.status ?? '';
+ if(saved) {
+  for(const field of form.elements) {
+   if(!field.name) continue;
+   if(field.multiple) for(const option of field.options) option.selected = saved.values.favorites.includes(option.value);
+   else field.value = saved.values[field.name] ?? '';
+  }
+ }
+ if(saved?.results) results = recommend(saved.values,games.filter(game=>saved.values.favorites.includes(game.title)));
+ el('home').hidden = !!saved && saved.view !== 'home';
+ el('app').hidden = !el('home').hidden;
+ form.hidden = saved?.view === 'browse';
+ if(saved?.theme) applyTheme(saved.theme);
+ render();
+ for(const card of el('cards').children) card.querySelector('details').open = !!saved?.expanded?.includes(card.querySelector('h3').textContent);
+ requestAnimationFrame(()=>window.scrollTo(0,saved?.scroll ?? 0));
+}
+function updateAccountBar() {
+ el('accountName').textContent = user ? 'Connecté · '+user : 'Espace joueur';
+ el('login').hidden = el('signup').hidden = !!user;
+ el('logout').hidden = el('manage').hidden = !user; if(!user) el('managePanel').hidden = true;
+}
+function showAccount(signup) {
+ creating = signup;
+ account.reset();
+ el('accountTitle').textContent = signup ? 'Créer un compte' : 'Connexion';
+ el('accountError').textContent = '';
+ account.elements.password.autocomplete = signup ? 'new-password' : 'current-password';
+ account.hidden = false;
+ account.elements.username.focus();
+}
+async function passwordHash(password,salt) {
+ const encoder = new TextEncoder();
+ const key = await crypto.subtle.importKey('raw',encoder.encode(password),'PBKDF2',false,['deriveBits']);
+ const bytes = await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',salt:encoder.encode(salt),iterations:600000},key,256);
+ return Array.from(new Uint8Array(bytes),byte=>byte.toString(16).padStart(2,'0')).join('');
+}
+el('manage').onclick = ()=>{el('managePanel').hidden=false;el('deleteAccount').focus();};
+el('closeManage').onclick = ()=>{el('managePanel').hidden=true;el('manage').focus();};
+el('deleteAccount').onclick = ()=>{
+ if(!user || !confirm('Supprimer ce compte et sa progression ?')) return;
+ localStorage.removeItem(storePrefix+'account:'+user);
+ localStorage.removeItem(storePrefix+'progress:'+user);
+ user = '';
+ updateAccountBar();
+ restoreProgress();
+};
+el('signup').onclick = ()=>showAccount(true);
+el('login').onclick = ()=>showAccount(false);
+el('cancelAccount').onclick = ()=>{account.hidden=true;account.reset();};
+account.addEventListener('submit',async event=>{
+ event.preventDefault();
+ const name = account.elements.username.value.trim().toLowerCase();
+ const password = account.elements.password.value;
+ const key = storePrefix+'account:'+name;
+ const error = el('accountError');
+ const submit = account.querySelector('button');
+ if(name.length<3){error.textContent='Saisissez au moins 3 caractères pour le nom.';return;}
+ submit.disabled = true;
+ try {
+  const record = JSON.parse(localStorage.getItem(key) || 'null');
+  if(creating && record){error.textContent='Ce nom est déjà utilisé.';return;}
+  const salt = record?.salt ?? crypto.randomUUID();
+  const hash = await passwordHash(password,salt);
+  if(!creating && record?.hash!==hash){error.textContent='Nom ou mot de passe incorrect.';return;}
+  if(creating){localStorage.setItem(key,JSON.stringify({salt,hash}));showAccount(false);error.textContent='Compte créé. Connectez-vous pour continuer.';return;}
+  user = name;
+  account.hidden = true;
+  account.reset();
+  updateAccountBar();
+  restoreProgress();
+ }catch{
+  error.textContent='Le stockage local ou la sécurité du navigateur est indisponible.';
+ }finally{submit.disabled=false;}
+});
+el('logout').onclick = ()=>{
+ saveProgress();
+ user = '';
+ updateAccountBar();
+ restoreProgress();
+};
+el('theme').onclick = ()=>{
+ const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+ applyTheme(theme);
+ try {localStorage.setItem(storePrefix+'theme',theme);saveProgress();}catch{}
+};
+try{applyTheme(localStorage.getItem(storePrefix+'theme') || 'dark');}catch{applyTheme('dark');}
+updateAccountBar();
+for(const eventName of ['click','input','change','submit','toggle']) {
+ document.addEventListener(eventName,()=>setTimeout(saveProgress,0));
+}
+window.addEventListener('pagehide',saveProgress);
+</script></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
